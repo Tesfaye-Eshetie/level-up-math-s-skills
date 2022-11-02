@@ -7,7 +7,13 @@ export default function Header() {
     <Navbar sticky="top" bg="dark" variant="dark" expand="md">
       <Container fluid>
         <Navbar.Brand href="#" className="ms-4">
-          Logo
+          <img
+            alt="logo"
+            src="/logo.png"
+            width="50"
+            height="50"
+            className="d-inline-block align-top"
+          />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll" className="ms-4">
