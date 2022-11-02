@@ -6,6 +6,7 @@ import GenerateQuestions from "./GenerateQuestions";
 
 export default function AnswerForm() {
   const [answer, setAnswer] = useState<number>();
+  const [rightAnswer, setRightAnswer] = useState<number>();
   const [isError, setIsError] = useState(false);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -15,7 +16,14 @@ export default function AnswerForm() {
 
   const handleSubmit = (event: React.SyntheticEvent<HTMLFormElement>) => {
     event.preventDefault();
+
     answer ? setIsError(false) : setIsError(true);
+
+    if (answer === rightAnswer) {
+      console.log("correct");
+    } else {
+      console.log("try again");
+    }
   };
 
   return (
@@ -30,7 +38,7 @@ export default function AnswerForm() {
           onSubmit={handleSubmit}
           className="d-flex justify-content-around align-items-baseline form"
         >
-          <GenerateQuestions />
+          <GenerateQuestions setRightAnswer={setRightAnswer} />
           <Form.Group className="mb-3">
             <Form.Control
               type="text"
