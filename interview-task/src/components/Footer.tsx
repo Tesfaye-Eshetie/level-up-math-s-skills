@@ -4,7 +4,7 @@ import { BsArrowUpCircleFill } from "react-icons/bs";
 export default function Footer() {
   return (
     <footer
-      id="footer"
+      id="contact"
       className="p-5 bg-dark text-white text-center position-relative"
     >
       <Container>

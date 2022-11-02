@@ -8,12 +8,7 @@ type resultProps = {
   answer: number | undefined;
   rightAnswer: number;
 };
-type resultsProps = {
-  id: string;
-  equation: string;
-  answer: number | undefined;
-  rightAnswer: number;
-};
+
 export default function DisplayResults({
   results,
 }: {
