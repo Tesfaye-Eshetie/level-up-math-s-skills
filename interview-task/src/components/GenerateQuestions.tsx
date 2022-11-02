@@ -3,12 +3,14 @@ import { useEffect, useState } from "react";
 import Card from "react-bootstrap/Card";
 
 export default function GenerateQuestions({
+  question,
+  setQuestion,
   setRightAnswer,
 }: {
-  setRightAnswer: React.Dispatch<React.SetStateAction<number | undefined>>;
+  question: string;
+  setQuestion: React.Dispatch<React.SetStateAction<string>>;
+  setRightAnswer: React.Dispatch<React.SetStateAction<number>>;
 }) {
-  const [question, setQuestion] = useState("");
-
   const BASE_URL = "https://api.mathjs.org/";
 
   const A = Math.floor(Math.random() * 1000);

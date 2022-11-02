@@ -4,6 +4,7 @@ import Header from "./components/Header";
 
 import "./App.css";
 import Footer from "./components/Footer";
+import FetchResults from "./components/FetchResults";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Header />
       <Container fluid="md" style={{ minHeight: "80vh" }}>
         <AnswerForm />
+        <FetchResults />
       </Container>
       <Footer />
     </>
