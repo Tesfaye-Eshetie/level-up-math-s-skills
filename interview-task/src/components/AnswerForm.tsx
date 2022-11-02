@@ -3,10 +3,12 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Card from "react-bootstrap/Card";
 import GenerateQuestions from "./GenerateQuestions";
+import ReactToAnswers from "./ReactToAnswers";
 
 export default function AnswerForm() {
   const [answer, setAnswer] = useState<number>();
   const [rightAnswer, setRightAnswer] = useState<number>();
+  const [correct, setCorrect] = useState("");
   const [isError, setIsError] = useState(false);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -17,21 +19,24 @@ export default function AnswerForm() {
   const handleSubmit = (event: React.SyntheticEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    answer ? setIsError(false) : setIsError(true);
-
-    if (answer === rightAnswer) {
-      console.log("correct");
+    if (!answer) {
+      setIsError(true);
+    } else if (answer !== rightAnswer) {
+      setCorrect("Try again?");
+      setIsError(false);
     } else {
-      console.log("try again");
+      setCorrect("Correct!");
+      setIsError(false);
     }
   };
 
   return (
-    <Card className="m-4">
+    <Card className="m-4" id="equations">
       <Card.Body className="p-4">
         <Card.Title className="text-capitalize pb-3 fw-bolder">
           Evaluate the following equation
         </Card.Title>
+        {correct ? <ReactToAnswers correct={correct} /> : null}
         <Form
           action="/"
           noValidate
