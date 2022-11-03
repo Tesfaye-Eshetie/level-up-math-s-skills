@@ -72,7 +72,7 @@ export default function AnswerForm() {
     if (!answer || parseInt(answer) === NaN) {
       setIsError(true);
       setAnswer("");
-    } else if (parseInt(answer) !== rightAnswer) {
+    } else if (parseInt(answer).toFixed(2) !== rightAnswer.toFixed(2)) {
       setIsCorrect("Not Correct");
       setIsError(false);
       addResults(key, {

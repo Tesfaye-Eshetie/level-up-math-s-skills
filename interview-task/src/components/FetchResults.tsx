@@ -23,7 +23,7 @@ export default function FetchResults() {
 
   useEffect(() => {
     getResults();
-  }, [results.length]);
+  }, [results]);
 
   return isDataAvailable ? (
     <Card id="results" className="m-4">
