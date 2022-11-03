@@ -10,8 +10,8 @@ export default function Header() {
           <img
             alt="logo"
             src="/logo.png"
-            width="40"
-            height="40"
+            width="50"
+            height="50"
             className="d-inline-block align-top"
           />
         </Navbar.Brand>
@@ -22,7 +22,7 @@ export default function Header() {
             style={{ maxHeight: "50vh" }}
             navbarScroll
           >
-            <Nav.Link href="#equations">Equations</Nav.Link>
+            <Nav.Link href="#equations">Equation</Nav.Link>
             <Nav.Link href="#results">Results</Nav.Link>
             <Nav.Link href="#contact">Contact</Nav.Link>
           </Nav>
