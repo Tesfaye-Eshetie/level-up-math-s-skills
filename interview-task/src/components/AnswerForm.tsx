@@ -111,7 +111,7 @@ export default function AnswerForm() {
           <Card.Text>{question}</Card.Text>
           <Form.Group className="mb-3">
             <Form.Control
-              type="text"
+              type="number"
               value={answer}
               onChange={handleChange}
               placeholder="Answer..."
