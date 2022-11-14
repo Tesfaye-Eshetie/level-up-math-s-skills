@@ -2,6 +2,8 @@
 
 This is a [React](https://reactjs.org) + [TypeScript](https://www.typescriptlang.org/) based app built with [Vite](https://vitejs.dev).
 
+### live URL: https://tesfaye-eshetie.github.io/level-up-math-s-skills/
+
 ## Description
 
 It is a one-page web application developed to support second graders in their understanding of basic mathematical concepts. This program will only present one mathematical equation to the user (a student) at a time, and it will then indicate whether or not they responded correctly. A student's response is also saved to the IndexedDB database when they submit it. Results with cross-referencing questions are loaded and shown on the user interface on the page loads. Plus Better reflections will be used to display the whole set of results as well as the average value.
