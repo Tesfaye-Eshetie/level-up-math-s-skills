@@ -1,6 +1,7 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import Logo from "/images/logo.png";
 
 export default function Header() {
   return (
@@ -9,7 +10,7 @@ export default function Header() {
         <Navbar.Brand href="#" className="ms-4">
           <img
             alt="logo"
-            src="/logo.png"
+            src={Logo}
             width="50"
             height="50"
             className="d-inline-block align-top"
