@@ -35,7 +35,7 @@ export default function AnswerForm() {
     default:
       console.log("Something went wrong.");
   }
-  const A = Math.floor(Math.random() * 1000);
+  const A = Math.floor(Math.random() * 100);
   const B = Math.floor(Math.random() * 100);
   const Equation = `${A}${operator}${B}`;
 
